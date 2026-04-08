@@ -1,0 +1,81 @@
+"use client";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { motion } from "motion/react";
+import Image from "next/image";
+import logo from "@/assets/images/logo.png";
+import Link from "next/link";
+import { Logs, MoveRight } from "lucide-react";
+import { navLinks } from "./utils";
+import AnimatedArrow from "@/components/animation/AnimatedArrow";
+import { Button } from "@/components/ui/button";
+
+const SmallNavSheet = () => {
+  return (
+    <div className="">
+      <Sheet>
+        <SheetTrigger className="border border-zinc-200 p-1.5 md:p-2 rounded-full bg-white cursor-pointer hover:bg-zinc-100 duration-150">
+          <Logs className="text-xl md:text-2xl text-black" />
+        </SheetTrigger>
+        <SheetContent side={"left"}>
+          <SheetHeader>
+            <SheetTitle></SheetTitle>
+            <SheetDescription />
+
+            <div className="">
+              <SheetTrigger>
+                <Link href={"/"}>
+                  <Image
+                    src={logo}
+                    alt="logo"
+                    className="h-12 w-auto object-cover"
+                  />
+                </Link>
+              </SheetTrigger>
+
+              <ul className="my-3">
+                {navLinks?.map((item) => {
+                  return (
+                    <motion.li
+                      initial={{ opacity: 0, x: 15, y: 20 }}
+                      animate={{ opacity: 1, x: 0, y: 0 }}
+                      transition={{ duration: 0.2, delay: 0.1 * item?.id }}
+                      key={item?.id}
+                      className="text-base relative group my-2"
+                    >
+                      <Link
+                        href={item?.rout}
+                        className="border-b border-b-zinc-700 py-4 font-figtree text-sm text-black flex flex-row gap-x-1 items-center group duration-300 cursor-pointer"
+                      >
+                        <SheetTrigger className="w-full flex flex-row gap-x-1 items-center cursor-pointer">
+                          <h6 className="text-black text-xl font-figtree">
+                            {item?.label}
+                          </h6>
+                          <MoveRight className="text-black block rotate-180 ml-1 group-hover:ml-2.5 duration-200" />
+                        </SheetTrigger>
+                      </Link>
+                    </motion.li>
+                  );
+                })}
+              </ul>
+
+              <Link href={"#"}>
+                <Button className="cursor-pointer text-white border-0 bg-primary-color hover:bg-[#d41145] duration-200 px-5.5 py-4.5 rounded-[5px]  font-bold group">
+                  Schedule A Meeting <AnimatedArrow />
+                </Button>
+              </Link>
+            </div>
+          </SheetHeader>
+        </SheetContent>
+      </Sheet>
+    </div>
+  );
+};
+
+export default SmallNavSheet;
