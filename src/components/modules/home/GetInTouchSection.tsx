@@ -9,20 +9,20 @@ import { cn } from "@/lib/utils";
 const UserData = [
   {
     _id: 1,
-    image: "/avatar_1.png",
+    image: "/images/avatar_1.png",
   },
   {
     _id: 2,
-    image: "/avatar_2.png",
+    image: "/images/avatar_2.png",
   },
   {
     _id: 3,
-    image: "/avatar_3.png",
+    image: "/images/avatar_3.png",
   },
 ];
 export default function GetInTouchSection() {
   return (
-    <Container className="bg-[#F9FAFB] py-8 px-4 rounded-md lg:space-y-8 space-y-6 flex items-center flex-col">
+    <Container className="bg-light-gray py-8 px-4 rounded-md lg:space-y-8 space-y-6 flex items-center flex-col">
       <div className="flex justify-center shrink-0 space-x-1.5 md:-space-x-2">
         {UserData.map((data, index) => (
           <motion.div
