@@ -3,6 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { envConfig } from "@/config";
 import Navbar from "@/components/shared/Navbar/Navbar";
+import Footer from "@/components/shared/Footer/Footer";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -58,7 +59,8 @@ export default function RootLayout({
     <html lang="en" className={`${dmSans.className} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <Navbar />
-        {children}
+        <div className="min-h-[calc(100vh-85px)]">{children}</div>
+        <Footer />
       </body>
     </html>
   );
