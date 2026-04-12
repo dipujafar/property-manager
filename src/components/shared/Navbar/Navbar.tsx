@@ -10,7 +10,7 @@ import AnimatedArrow from "@/components/animation/AnimatedArrow";
 
 function Navbar({ className }: { className?: string }) {
   return (
-    <div className={cn("sticky top-0 left-0 bg-white py-6 shadow-[0_3px_8px_rgba(212,17,69,0.25)]", className)}>
+    <div className={cn("sticky top-0 left-0 z-10 bg-white py-6 shadow-[0_3px_8px_rgba(212,17,69,0.25)]", className)}>
       <Container>
         <div className="flex-between gap-x-5">
           <Link href={"/"}>

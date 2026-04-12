@@ -11,7 +11,7 @@ const logoes = [
   "/images/logo_7.png",
 ];
 
-export default function ConpaniesLogo() {
+export default function CompaniesLogo() {
   return (
     <div className="lg:space-y-9 space-y-6">
       <h6 className="md:text-xl text-black font-semibold px-4 text-center">
