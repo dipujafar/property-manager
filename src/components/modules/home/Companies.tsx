@@ -30,7 +30,6 @@ export default function Companies() {
       >
         {companiesLogo.map((item, index) => (
           <motion.div
-            // @ts-ignore
             variants={scaleUpChildVariant}
             key={index}
             className="bg-white py-13.5 px-12 flex items-center justify-center rounded-lg hover:shadow-[0_4px_24px_0_rgba(212,17,69,0.25)] duration-300"

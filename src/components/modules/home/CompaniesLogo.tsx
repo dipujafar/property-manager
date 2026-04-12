@@ -18,7 +18,7 @@ export default function CompaniesLogo() {
         Trusted by leaders in <CCountUp end={50} />+ industries
       </h6>
 
-      <div className="bg-[#F6F6F6] py-5 border border-red-400 ">
+      <div className="bg-[#F6F6F6] py-5">
         <Marquee
           pauseOnHover
           gradient

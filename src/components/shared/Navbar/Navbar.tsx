@@ -5,12 +5,11 @@ import { cn } from "@/lib/utils";
 import Container from "../Container";
 import SmallNavSheet from "./SmallNavSheet";
 import { navLinks } from "./utils";
-import { Button } from "@/components/ui/button";
-import AnimatedArrow from "@/components/animation/AnimatedArrow";
+import ScheduleMeetingBtn from "./ScheduleMeetingBtn";
 
 function Navbar({ className }: { className?: string }) {
   return (
-    <div className={cn("sticky top-0 left-0 z-10 bg-white py-6 shadow-[0_3px_8px_rgba(212,17,69,0.25)]", className)}>
+    <div className={cn("sticky top-0 left-0 z-30 bg-white py-6 shadow-[0_3px_80px_rgba(212,17,69,0.25)]", className)}>
       <Container>
         <div className="flex-between gap-x-5">
           <Link href={"/"}>
@@ -29,7 +28,7 @@ function Navbar({ className }: { className?: string }) {
                 <li key={nav?.id} className="relative group">
                   <Link
                     href={nav?.rout}
-                    className={cn("text-primary-gray font-medium hover:text-primary-color duration-200 pb-1 block text-[#1E1E1E]", nav?.active && "text-primary-color")}
+                    className={cn("font-medium hover:text-primary-color duration-200 pb-1 block text-[#1E1E1E]", nav?.active && "text-primary-color")}
                   >
                     {nav?.label}
                     <span className={cn("absolute bottom-0 left-0 h-0.5 w-full bg-primary-color scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out origin-left", nav?.active && "scale-x-100")} />
@@ -41,11 +40,7 @@ function Navbar({ className }: { className?: string }) {
 
           <div>
             <div className="lg:block  hidden">
-              <Link href={"#"}>
-                <Button className="cursor-pointer text-white border-0 bg-primary-color hover:bg-[#d41145] duration-200 px-5.5 py-4.5 rounded-[5px]  font-bold group">
-                  Schedule A Meeting <AnimatedArrow />
-                </Button>
-              </Link>
+             <ScheduleMeetingBtn />
             </div>
             <div className="lg:hidden block">
               <SmallNavSheet />

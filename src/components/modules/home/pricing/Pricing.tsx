@@ -61,7 +61,7 @@ const pricingData = [
 export default function Pricing() {
     return (
         <Container className=" lg:space-y-22.5 space-y-16 ">
-            <div className='lg:space-y-8.5 space-y-5'>
+            <div id='pricing' className='lg:space-y-8.5 space-y-5'>
                 <SectionTitle
                     title="Airnbn Assistent pricing"
                     subTitle="Choose a plan that’s right for you"

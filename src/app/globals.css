@@ -6,9 +6,11 @@
 
 @theme {
   --color-primary-color: #ed3c6a;
-  --color-primary-black: #18181B;
-  --color-primary-gray: #606060;    
-  --color-light-gray: #F9FAFB;
+  --color-primary-black: #18181b;
+  --color-primary-gray: #606060;
+  --color-light-gray: #f9fafb;
+  --color-light-pink: #fdebf0;
+  --color-primary-pink: #f8becd;
 }
 
 @theme inline {
@@ -122,6 +124,11 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+/* ------------- smooth scroll ------------- */
+html {
+  scroll-behavior: smooth;
 }
 
 @layer base {

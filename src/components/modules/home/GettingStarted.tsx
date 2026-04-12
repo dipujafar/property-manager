@@ -31,9 +31,9 @@ export default function GettingStarted() {
         {infoData.map((item) => (
           <div
             key={item.id}
-            className="flex flex-col flex-1 lg:space-y-8 space-y-6"
+            className="flex flex-col flex-1 lg:space-y-8 space-y-6 mt-7 md:mt-0"
           >
-            <div className="flex-1 bg-white py-7 px-4 flex items-center justify-center rounded-lg border border-[#FDEBF0] hover:border-[#fbb9cb] duration-300 relative">
+            <div className="flex-1 bg-white py-7 px-4 flex items-center justify-center rounded-lg border border-light-pink hover:border-[#fbb9cb] duration-300 relative">
               {" "}
               {/* flex-1 here */}
               <Image
@@ -43,8 +43,8 @@ export default function GettingStarted() {
                 alt="info icon"
                 className="w-auto  max-h-27 object-cover"
               />
-              <div className="size-19 bg-white border-4 border-primary-color rounded-full absolute -top-6 -left-6 flex-center">
-                <span className="text-[29px] font-medium">{String(item.id).padStart(2, "0")}</span>
+              <div className="md:size-19 size-16 bg-white border-4 border-primary-color rounded-full absolute md:-top-6 -top-10 md:-left-6 flex-center">
+                <span className="lg:text-[29px] text-2xl font-medium">{String(item.id).padStart(2, "0")}</span>
               </div>
             </div>
             <p className="lg:text-xl font-semibold text-center max-w-63.75 mx-auto">

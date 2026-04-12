@@ -1,4 +1,4 @@
-"use client";
+"use client";;
 import {
   Sheet,
   SheetContent,
@@ -13,8 +13,7 @@ import logo from "@/assets/images/logo.png";
 import Link from "next/link";
 import { Logs, MoveRight } from "lucide-react";
 import { navLinks } from "./utils";
-import AnimatedArrow from "@/components/animation/AnimatedArrow";
-import { Button } from "@/components/ui/button";
+import ScheduleMeetingBtn from "./ScheduleMeetingBtn";
 
 const SmallNavSheet = () => {
   return (
@@ -65,11 +64,7 @@ const SmallNavSheet = () => {
                 })}
               </ul>
 
-              <Link href={"#"}>
-                <Button className="cursor-pointer text-white border-0 bg-primary-color hover:bg-[#d41145] duration-200 px-5.5 py-4.5 rounded-[5px]  font-bold group">
-                  Schedule A Meeting <AnimatedArrow />
-                </Button>
-              </Link>
+             <ScheduleMeetingBtn />
             </div>
           </SheetHeader>
         </SheetContent>
